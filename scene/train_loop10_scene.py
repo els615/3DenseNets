@@ -288,7 +288,7 @@ for rep in range(0,10):
         # forward + backward + optimize
         output = net(images)
         output_final = output.cpu().data.detach().numpy()
-        output_argmax = np.argmax(output_final)
+        output_argmax = np.argmax(output_final,axis=1)
         labels_numpy = labels.cpu().data.numpy()
         score = np.concatenate((score,(labels_numpy==output_argmax).astype(int)),axis=0)
     meanAccuracy = sum(score)/len(score)
