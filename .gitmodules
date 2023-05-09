@@ -1,0 +1,3 @@
+[submodule "iEEG_DCNN"]
+	path = iEEG_DCNN
+	url = https://github.com/els615/iEEG_DCNN.git
